@@ -7,7 +7,7 @@
  * main - Entry point
  *
  * Return : Always 0 means success
- * /
+ */
 int main(void)
 {
 	int n;
