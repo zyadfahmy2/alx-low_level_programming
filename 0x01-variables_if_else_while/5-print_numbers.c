@@ -7,7 +7,6 @@
  */
 int main(void)
 {
-	char alphabet;
 	int i;
 
 	alphabet = 'a';
