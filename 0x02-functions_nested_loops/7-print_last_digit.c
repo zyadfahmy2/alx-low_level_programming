@@ -1,5 +1,20 @@
 #include "main.h"
 /**
+*_abs - function that returns the absolute value of an integer
+*@num: param1
+*
+*Return: absolute value
+*/
+int _abs(int num)
+{
+        if (num < 0)
+        {
+                return (num * -1);
+        }
+        return (num);
+}
+
+/**
 *print_last_digit - prints the last digit of a number
 *@n: first param
 *
@@ -9,7 +24,7 @@ int print_last_digit(int n)
 {
 	int l;
 
-	l = (n % 10);
+	l = (_abs(n) % 10);
 	_putchar(l + '0');
 	return (l);
 }
