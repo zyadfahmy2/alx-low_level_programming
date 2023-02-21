@@ -7,11 +7,11 @@
 */
 int _abs(int num)
 {
-        if (num < 0)
-        {
-                return (num * -1);
-        }
-        return (num);
+	if (num < 0)
+	{
+		return (num * -1);
+	}
+	return (num);
 }
 
 /**
@@ -22,9 +22,7 @@ int _abs(int num)
 */
 int print_last_digit(int n)
 {
-	int l;
-
-	l = (_abs(n) % 10);
-	_putchar(l + '0');
-	return (l);
+	if (n < 0)
+		return (10 - n % 10);
+	return (n % 10);
 }
