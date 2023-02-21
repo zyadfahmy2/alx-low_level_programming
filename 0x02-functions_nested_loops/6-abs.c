@@ -1,5 +1,5 @@
 /**
-*int _abs - function that returns the absolute value of an integer
+*_abs - function that returns the absolute value of an integer
 *@num: param1
 *
 *Return: absolute value
