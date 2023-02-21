@@ -17,9 +17,12 @@ void times_table(void)
 		{
 			_putchar(x);
 			x = '0' + (char)i;
-			_putchar(',');
-			_putchar('.');
-			_putchar('.');
+			if(j != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+			}
 		}
 		_putchar('\n');
 	}
