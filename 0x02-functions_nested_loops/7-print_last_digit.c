@@ -22,7 +22,5 @@ int _abs(int num)
 */
 int print_last_digit(int n)
 {
-	if (n < 0)
-		return (10 - n % 10);
-	return (n % 10);
+	return (abs(n) % 10);
 }
