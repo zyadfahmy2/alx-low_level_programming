@@ -1,3 +1,4 @@
+int _putchar(char c);
 /**
 * print_alphabet - print the small letters of the alphabet
 *
