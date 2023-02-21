@@ -1,17 +1,4 @@
-#include <unistd.h>
-/**
-*_putchar - prints character to the output stream
-*@c: character to be printed
-*
-*Return: 0 (success) -1 (fail)
-*/
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-
-}
-
-
+#include "main.h"
 /**
 * print_alphabet - print the small letters of the alphabet
 *
@@ -22,7 +9,7 @@ void print_alphabet(void)
 	int i;
 	char alphabet;
 
-	alphabet = 'A';
+	alphabet = 'a';
 	for (i = 0; i < 26; i++)
 	{
 		_putchar(alphabet++);
