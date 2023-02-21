@@ -13,14 +13,14 @@ void jack_bauer(void)
 	minutes = 0;
 	while (hours != 24)
 	{
-		_putchar(((hours / 10) + '0');
+		_putchar((hours / 10) + '0');
 		_putchar((hours % 10) + '0');
 		_putchar((minutes / 10) + '0');
 		_putchar((minutes % 10) + '0');
 		minutes++;
 		if (minutes == 60)
 		{
-			minutes =0;
+			minutes = 0;
 			hours++;
 		}
 	}
