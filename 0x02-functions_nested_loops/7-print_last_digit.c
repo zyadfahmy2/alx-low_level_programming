@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-*_abs - function that returns the absolute value of an integer
-*@num: param1
+*print_last_digit - function that returns  and print the last digi.
+*@n: param1
 *
-*Return: absolute value
+*Return: last digit
 */
 int print_last_digit(int n)
 {
