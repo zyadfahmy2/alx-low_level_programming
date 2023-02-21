@@ -1,4 +1,4 @@
-int _putchar(char c);
+#include "main.h"
 /**
 * print_alphabet - print the small letters of the alphabet
 *
