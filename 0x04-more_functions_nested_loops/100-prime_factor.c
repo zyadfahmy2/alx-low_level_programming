@@ -29,7 +29,11 @@ int main(void)
 			n = n / i;
 		}
 	}
-/*If n is greater than 2, it means that it is still divisible by a prime number greater than the square root of the original n. In that case, set max to n.*/
+/*
+*If n is greater than 2,
+*it means that it is still divisible by a prime number
+*greater than the square root of the original n. In that case, set max to n.
+*/
 	if (n > 2)
 		max = n;
 
