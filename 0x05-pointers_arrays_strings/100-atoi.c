@@ -22,6 +22,7 @@ int _atoi(char *s)
 			number = 1;
 			break;
 		}
+		i++;
 	}
 	if (!number)
 		return (0);
