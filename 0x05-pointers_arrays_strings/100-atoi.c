@@ -28,14 +28,14 @@ int _atoi(char *s)
 		return (0);
 	if (sign == '-')
 	{
-		for (i = 1; s[i] != '\0'; i++)
+		for (; s[i] != '\0'; i++)
 		{
 			res = res * 10 - (s[i] - '0');
 		}
 	}
 	else
 	{
-		for (i = 0; s[i] != '\0'; i++)
+		for (; s[i] != '\0'; i++)
 		{
 			res = res * 10 + (s[i] - '0');
 		}
