@@ -1,0 +1,1 @@
+this is pointer_array_strings assignment
