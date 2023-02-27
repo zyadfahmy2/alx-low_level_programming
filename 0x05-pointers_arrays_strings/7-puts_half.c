@@ -12,16 +12,16 @@ void puts_half(char *str)
 		length++;
 	n = (length - 1) / 2;
 /* ahmed */
-	if (n & 1)
+	if (length & 1)
 	{
-		for (i = length - n +1; i < length; i++)
+		for (i = length - n ; i < length; i++)
 		{
 			_putchar(str[i]);
 		}
 	}
 	else
 	{
-		for (i = length / 2 + 1; i < length; i++)
+		for (i = length / 2; i < length; i++)
 		{
 			_putchar(str[i]);
 		}
