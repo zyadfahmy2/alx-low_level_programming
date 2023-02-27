@@ -13,10 +13,11 @@ int _atoi(char *s)
 	i = 0;
 	res = 0;
 	number = 0;
+	sign = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == '-' || s[i] == '+')
-			sign = s[i];
+		if (s[i] == '-')
+			sign++;
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			number = 1;
@@ -26,7 +27,7 @@ int _atoi(char *s)
 	}
 	if (!number)
 		return (0);
-	if (sign == '-')
+	if (sign & 1)
 	{
 		for (; s[i] >= '0' && s[i] <= '9'; i++)
 		{
