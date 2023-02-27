@@ -11,19 +11,19 @@ int _atoi(char *s)
 
 	i = 0;
 	res = 0;
-	if (str[i] == '-')
+	if (s[i] == '-')
 	{
-		for (i = 1; str[i] != '\0'; i++)
+		for (i = 1; s[i] != '\0'; i++)
 		{
-			res = res * 10 - (str[i] - '0');
+			res = res * 10 - (s[i] - '0');
 		}
 	}
 	else
 	{
-		for (i = 0; str[i] != '\0'; i++)
+		for (i = 0; s != '\0'; i++)
 		{
-			res = res * 10 + (str[i] - '0');
+			res = res * 10 + (s - '0');
 		}
 	}
 	return (res);
-}
+
