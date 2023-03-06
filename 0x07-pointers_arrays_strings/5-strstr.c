@@ -24,4 +24,5 @@ char *_strstr(char *haystack, char *needle)
 		if (count == j)
 			return (hatstack + i);
 	}
+	return (NULL);
 }
