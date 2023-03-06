@@ -1,3 +1,4 @@
+#include "main.h"
 /**
 * _memset - function fills the first n bytes of the memory area pointed to by s with the constant byte b
 * @s: pointer to character to be passed (we could pass an array of integer here
