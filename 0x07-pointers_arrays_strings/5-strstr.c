@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
 * *_strstr - function that locates a substring
 * @haystack: main string to be compared
@@ -17,12 +18,12 @@ char *_strstr(char *haystack, char *needle)
 		count = 0;
 		for (j = 0; needle[j] != '\0'; j++)
 		{
-			if (hatstack[i] != needle[j]
+			if (haystack[i] != needle[j])
 				break;
 			count++;
 		}
 		if (count == j)
-			return (hatstack + i);
+			return (haystack + i);
 	}
 	return (NULL);
 }
