@@ -25,6 +25,7 @@ int _strspn(char *s, char *accept)
 			}
 		}
 		if (!flag)
-			return count;
+			return (count);
 	}
+	return (0);
 }
