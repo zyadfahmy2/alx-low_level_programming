@@ -9,9 +9,9 @@
 int is_prime_rec(int n, int i)
 {
 	if (i >= n / 2)
-		return (0);
-	if (n % i == 0)
 		return (1);
+	if (n % i == 0)
+		return (0);
 	return (is_prime_rec(n, i + 1));
 }
 /**
