@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
 * main - Entry point
 * @argc: number of arguments + name of the program
@@ -8,6 +9,11 @@
 */
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	printf("%d\n", (argv[1][0] - '0') * (argv[2][0] - '0'));
+	if (argc < 2)
+	{
+		printf("Error\n");
+		return (0);
+	}
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }
