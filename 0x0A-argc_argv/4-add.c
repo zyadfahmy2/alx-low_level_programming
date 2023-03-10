@@ -9,25 +9,31 @@
 */
 int main(int argc, char *argv[])
 {
-	int sum, i;
+	int sum, num, i, j, k;
 
 	sum = 0;
-	if (argc < 3)
-	{
-		printf("0\n");
-		return (0);
-	}
+
 	for (i = 1; i < argc; i++)
 	{
-		if (argv[i][0] == '0')
-			continue;
-		if (atoi(argv[i]) == 0)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][j] > '9' || argv[i][j] < '0')
+			{
+				puts("Error");
+				return (1);
+			}
 		}
-		sum += atoi(argv[i]);
 	}
+
+	for (k = 1; k < argc; k++)
+	{
+		num = _atoi(argv[k]);
+		if (num >= 0)
+		{
+			sum += num;
+		}
+	}
+
 	printf("%d\n", sum);
 	return (0);
 }
