@@ -9,7 +9,8 @@
 */
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	int val, count;
+	int val, count, i;
+	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc < 2 || argc > 2)
 	{
@@ -23,32 +24,12 @@ int main(int argc __attribute__((unused)), char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	while (val != 0)
+	for (i = 0; i < 5; i++)
 	{
-		if (val >= 25)
+		while (val >= coins[i])
 		{
-			val -= 25;
 			count++;
-		}
-		else if (val >= 10)
-		{
-			val -= 10;
-			count++;
-		}
-		else if (val >= 5)
-		{
-			val -= 5;
-			count++;
-		}
-		else if (val >= 2)
-		{
-			val -= 2;
-			count++;
-		}  
-		else if (val >= 1)
-		{
-			val -= 1;
-			count++;
+			val -= coins[i];
 		}
 	}
 	printf("%d\n", count);
