@@ -18,6 +18,11 @@ int main(int argc __attribute__((unused)), char *argv[])
 	}
 	count = 0;
 	val = atoi(argv[1]);
+	if (val < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
 	while (val != 0)
 	{
 		if (val >= 25)
