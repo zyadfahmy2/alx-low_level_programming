@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * The returned pointer should point to a newly allocated space
+ * str_concat - The returned pointer should point to a newly allocated space
  *  in memory which contains the contents of s1,
  *  followed by the contents of s2, and null terminated
  *  if NULL is passed, treat it as an empty string
@@ -27,6 +27,8 @@ char *str_concat(char *s1, char *s2)
 	while (s2[l2] != '\0')
 		l2++;
 	s = malloc(sizeof(char) * (l1 + l2 + 1));
+	if (s == NULL)
+		return NULL;
 	while (i < l1)
 	{
 		s[i] = s1[i];
@@ -38,5 +40,5 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 	s[i] = '\0';
-	return(s);
+	return (s);
 }
