@@ -9,7 +9,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, totalLength, j;
+	int i, totalLength, j, size;
 	char **newString;
 
 	totalLength = 0;
@@ -36,7 +36,7 @@ char *argstostr(int ac, char **av)
 		}
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			newString[i - 1][j] = av[i][j]
+			newString[i - 1][j] = av[i][j];
 		}
 	}
 	
