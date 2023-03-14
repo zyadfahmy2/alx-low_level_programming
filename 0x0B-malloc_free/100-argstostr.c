@@ -38,5 +38,5 @@ char *argstostr(int ac, char **av)
 			newString[i - 1][j] = av[i][j];
 		}
 	}
-	return (newStringo);
+	return (newString);
 }
