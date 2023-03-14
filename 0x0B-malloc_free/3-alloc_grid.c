@@ -5,6 +5,8 @@
  * Each element of the grid should be initialized to 0
  * The function should return NULL on failure
  * If width or height is 0 or negative, return NULL
+ * @width: number of columns
+ * @height: number of rows
  *
  * Return:returns a pointer to a 2 dimensional array of integers.
  */
@@ -15,9 +17,23 @@ int **alloc_grid(int width, int height)
 
 	if (width == 0 || height == 0)
 		return (NULL);
-	grid = malloc(sizeof(int) * (width * height));
+	grid = malloc(sizeof(int *) * height);
 	if (grid == NULL)
 		return (NULL);
+	for (i = 0; i < rows; i++)
+	{
+		grid[i] = malloc(sizeof(int) * width);
+		if (grid[i] == NULL)
+		{
+			while(i > -1)
+			{
+				free(grid[i]);
+				i--;
+			}
+			return (NULL);
+		}
+	}
+
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
