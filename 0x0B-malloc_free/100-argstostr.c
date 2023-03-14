@@ -9,34 +9,34 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, j, size;
-	char **newString;
+	int i, j, size, x;
+	char *newString;
+	x = 0;
 
 	if (ac == 0)
 		return (NULL);
-	newString = malloc(sizeof(char *) * ac - 1);
-	if (newString == NULL)
-		return (NULL);
 	for (i = 1; i < ac; i++)
 	{
-		size = 0;
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
 			size++;
 		}
-		newString[i - 1] = malloc(sizeof(char) * size + 1);
-		if (newString[i - 1] == NULL)
-		{
-			while (i > 1)
-			{
-				free(newString[i - 1]);
-			}
-			free(newString);
-		}
+		size++;
+	}
+	size++;
+	newString = malloc(sizeof(char) * size);
+	if (newString == NULL)
+		return (NULL);
+	for (i = 1; i < ac; i++)
+	{
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			newString[i - 1][j] = av[i][j];
+			newString[x] = av[i][j];
+			x++;
 		}
+		newString[x] = '\n';
+		x++;
 	}
+	newString[x] = '\0';
 	return (newString);
 }
