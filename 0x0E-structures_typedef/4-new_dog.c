@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include "dog.h"
-#include "main.h"
 /**
 *_strlen - function that returns the length of a string
 *@s: pointer to charachter (String)
