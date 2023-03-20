@@ -5,7 +5,7 @@
  * program that prints the name of the file it was compiled from,
  * followed by a new line.
  *
- * RETURN: always EXIT_SUCCESS
+ * Return: always EXIT_SUCCESS
  */
 int main(void)
 {
