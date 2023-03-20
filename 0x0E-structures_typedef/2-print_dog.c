@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include "dog.h"
 /**
- * print_dog function that prints struct dog
+ * print_dog - function that prints struct dog
  * @d: struct of type dog
  */
 void print_dog(struct dog *d)
 {
-	if(d == NULL)
+	if (d == NULL)
 	{
 		return;
 	}
