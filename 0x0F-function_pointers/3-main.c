@@ -8,9 +8,10 @@
  */
 int main(int argc, char *argv[])
 {
-	int (*op)(int,int);
+	int (*op)(int, int);
 	int result, a3;
 	char a2;
+
 	if (argc != 4)
 	{
 		printf("Error\n");
