@@ -14,16 +14,16 @@ unsigned int binary_to_uint(const char *b)
 	res = 0;
 	base = 1;
 	length = 0;
-	if(b == NULL)
+	if (b == NULL)
 		return (0);
-	while(!b[length])
+	while (b[length] != '\0')
 	{
 		length++;
 	}
 	length--;
 	while (length > -1)
 	{
-		if(b[length] < '0' || b[length] > '9')
+		if (b[length] < '0' || b[length] > '9')
 			return (0);
 		res += base * (b[length] - '0');
 		base *= 2;
@@ -31,4 +31,3 @@ unsigned int binary_to_uint(const char *b)
 	}
 	return (res);
 }
-		
