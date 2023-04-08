@@ -6,23 +6,18 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int temp;
+	unsigned int shifts, temp;
 
-	temp = n;
 	if (n == 0)
 		printf("0");
-	while (n)
+	for (temp = n, shifts = 0; (temp >>= 1); shifts++);
+	while (shifts)
 	{
-		n >>= 1;
-		if (n * 2 != temp)
-		{
+		if ((n >> shifts)&1)
 			printf("1");
-		}
 		else
-		{
 			printf("0");
-		}
-		temp >>= 1;
+		shifts--;
 	}
 	printf("\n");
 }
