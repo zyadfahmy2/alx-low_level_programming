@@ -11,6 +11,11 @@ void print_binary(unsigned long int n)
 
 	for (temp = n, shifts = 0; (temp >>= 1); shifts++)
 		;
+	if (n == 0)
+	{
+		printf("0");
+		return;
+	}
 	while (shifts >= 0)
 	{
 		if ((n >> shifts) & 1)
