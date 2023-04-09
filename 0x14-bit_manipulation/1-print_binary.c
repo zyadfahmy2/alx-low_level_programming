@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 		printf("0");
 		return;
 	}
-	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
+	for (temp = n, shifts = 0; (temp >>= 1); shifts++)
 		;
 
 
