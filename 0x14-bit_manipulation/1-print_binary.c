@@ -9,18 +9,13 @@ void print_binary(unsigned long int n)
 	unsigned int temp;
 	int shifts;
 
-	for (temp = n, shifts = 0; (temp >>= 1); shifts++)
-		;
 	if (n == 0)
 	{
 		printf("0");
 		return;
 	}
-		if (n == 1)
-	{
-		printf("1");
-		return;
-	}
+	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
+		;
 	while (shifts >= 0)
 	{
 		if ((n >> shifts) & 1)
