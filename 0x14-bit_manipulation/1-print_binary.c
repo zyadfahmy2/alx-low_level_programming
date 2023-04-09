@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int temp;
+	unsigned long int temp;
 	int shifts;
 
 	if (n == 0)
@@ -14,14 +14,15 @@ void print_binary(unsigned long int n)
 		printf("0");
 		return;
 	}
+
 	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
 		;
-	while (shifts >= 0)
+
+	for (; shifts >= 0; shifts--)
 	{
 		if ((n >> shifts) & 1)
 			printf("1");
 		else
 			printf("0");
-		shifts--;
 	}
 }
