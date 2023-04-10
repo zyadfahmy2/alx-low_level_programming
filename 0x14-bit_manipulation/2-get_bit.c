@@ -8,11 +8,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int temp, shifts;
-
-	for (temp = n, shifts = 0; (temp >>= 1); shifts++)
-		;
-	if (index > shifts)
+	if (index > 31)
 		return (-1);
 	return ((n >> index) & 1);
 }
